@@ -16,7 +16,7 @@ xmobarTitleColor = "#007FEE"
 xmobarCurrentWorkspaceColor = "#CEFFAC"
 
 main = do
-	xmproc <- spawnPipe "/usr/bin/xmobar"
+	xmproc <- spawnPipe "~/.cabal/bin/xmobar"
 	xmonad $ defaultConfig {
 		modMask = mod4Mask,
 		terminal = "urxvt",
@@ -57,7 +57,7 @@ myManageHook = composeAll
 	 className =? "trayer" --> doIgnore]
 
 myStartupHook = do
-	spawn "trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 7 --height 15 --transparent true --tint 0x000000"
+	spawn "trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 4 --height 15 --transparent true --tint 0x000000"
 
 avoidMaster :: W.StackSet i l a s sd -> W.StackSet i l a s sd
 avoidMaster = W.modify' $ \c -> case c of

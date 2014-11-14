@@ -13,7 +13,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-export PATH=$PATH:.cabal/bin
+export PATH=$PATH:~/.cabal/bin:~/scripts
 
 zstyle ':completion:*' menu select
 
