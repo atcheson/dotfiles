@@ -33,7 +33,7 @@ myAdditionalKeys =
 		("M-z", sendMessage MirrorShrink),
 		("M-a", sendMessage MirrorExpand),
 		("M-p", spawn "`yeganesh -x`"),
-		("M-q", spawn "pkill trayer; pkill nm-applet; xmonad --recompile; xmonad --restart"),
+		("M-q", spawn "pkill trayer; xmonad --recompile; xmonad --restart"),
 		("M-o", spawn "thunar"),
 		("M-i", spawn "chromium")
 	]
@@ -58,7 +58,6 @@ myManageHook = composeAll
 
 myStartupHook = do
 	spawn "trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 7 --height 15 --transparent true --tint 0x000000"
-	spawn "sudo nm-applet"
 
 avoidMaster :: W.StackSet i l a s sd -> W.StackSet i l a s sd
 avoidMaster = W.modify' $ \c -> case c of
