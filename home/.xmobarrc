@@ -1,0 +1,19 @@
+Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = TopW L 96
+       , lowerOnStart = True
+       , commands = [ Run Weather "ZYHB" ["-t","ZYHB: <tempC>C <skyCondition>","-L","-5","-H","15","--high","red","--low","lightblue"] 6000
+                    , Run Network "eth0" ["-L","0","-H","32","--normal","green","--high","red"] 10
+                    , Run MultiCpu ["-t", "cpu: <total0>% <total1>% <total2>% <total3>% <total4>% <total5>% <total6>% <total7>%","-L","3","-H","50","--normal","green","--high","red"] 10
+                    , Run Memory ["-t","mem: <usedratio>%"] 10
+                    , Run Com "uname" ["-s","-r"] "" 36000
+                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run CoreTemp ["-t", "temp: <core0>C"] 50 
+                    , Run StdinReader
+                    , Run Com "/home/m/scripts/batterymeter" [] "batm" 50
+                    , Run Com "/home/m/scripts/volumemeter" [] "vol" 10 ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %coretemp% | %multicpu% | %memory% | %eth0% | bat: %batm% | vol: %vol% | %ZYHB%| <fc=#010fee>%date%</fc>"
+       }
