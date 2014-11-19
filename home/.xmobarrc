@@ -10,10 +10,8 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Com "uname" ["-s","-r"] "" 36000
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
                     , Run CoreTemp ["-t", "temp: <core0>C"] 50 
-                    , Run StdinReader
-                    , Run Com "/home/m/scripts/batterymeter" [] "batm" 50
-                    , Run Com "/home/m/scripts/volumemeter" [] "vol" 10 ]
+                    , Run StdinReader ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %coretemp% | %multicpu% | %memory% | %eth0% | bat: %batm% | vol: %vol% | %ZYHB%| <fc=#010fee>%date%</fc>"
+       , template = "%StdinReader% }{ %coretemp% | %multicpu% | %memory% | %ZYHB%| <fc=#010fee>%date%</fc>"
        }
