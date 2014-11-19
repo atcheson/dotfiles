@@ -4,6 +4,7 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Plugin 'gmarik/vundle'
+Plugin 'scrooloose/syntastic'
 
 filetype plugin indent on
 
