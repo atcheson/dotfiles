@@ -15,3 +15,5 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
+
+let g:syntastic_cpp_check_header = 1
