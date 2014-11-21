@@ -7,3 +7,6 @@
 [submodule "home/.vim/bundle/vundle"]
 	path = home/.vim/bundle/vundle
 	url = https://github.com/gmarik/Vundle.vim.git
+[submodule "home/.dynamic-colors"]
+	path = home/.dynamic-colors
+	url = https://github.com/sos4nt/dynamic-colors

@@ -1,7 +1,8 @@
 !urxvt configuration
 
 urxvt.scrollstyle: plain
-urxvt.background: #000000
+urxvt.background: #101010
 urxvt.foreground: #ffffff
 urxvt.borderless: 1
 
+urxvt*dynamicColors: on
