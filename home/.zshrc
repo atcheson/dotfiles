@@ -8,7 +8,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 #the rest
-ISTFILE=~/.histfile
+HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory autocd extendedglob nomatch correct share_history
