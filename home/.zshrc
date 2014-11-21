@@ -2,7 +2,6 @@
 source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 
-antigen bundle git
 antigen bundle history-substring-search
 antigen bundle zsh-users/zsh-syntax-highlighting
 
