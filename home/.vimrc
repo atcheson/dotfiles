@@ -16,6 +16,10 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
+set hlsearch
+set incsearch
+
+silent !chmod +x ~/.vim/bundle/ProtoDef/pullproto.pl
 
 let g:syntastic_cpp_check_header = 1
 let protodefprotogetter = "~/.vim/bundle/ProtoDef/pullproto.pl"
