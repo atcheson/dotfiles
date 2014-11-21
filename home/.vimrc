@@ -6,6 +6,7 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/syntastic'
 Plugin 'FSwitch'
+Plugin 'ProtoDef'
 
 filetype plugin indent on
 
@@ -17,3 +18,4 @@ set smarttab
 set expandtab
 
 let g:syntastic_cpp_check_header = 1
+let protodefprotogetter = "~/.vim/bundle/ProtoDef/pullproto.pl"
