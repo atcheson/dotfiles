@@ -1,5 +1,13 @@
 #do this first to prevent flickering
 export PATH=$PATH:~/.cabal/bin:~/scripts:$HOME/.dynamic-colors/bin
+
+for infile in $HOME/.colorschemes/*
+do
+    outfile=$HOME/.dynamic-colors/colorschemes/`basename $infile`
+    if [ ! -f $outfile ]; then
+        ln -s $infile $outfile
+    fi
+done
 dynamic-colors init
 
 #antigen config
