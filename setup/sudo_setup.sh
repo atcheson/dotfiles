@@ -1,3 +1,5 @@
+#!/bin/sh
+
 #ensure that sudo is set up so we can use it
 apt-get --assume-yes install sudo
 sudoers_line="%sudo         ALL=(ALL:ALL) NOPASSWD: ALL"
