@@ -8,4 +8,4 @@ if ! debInst "ruby" || ! debInst "git"; then
 fi
 gem install homesick
 homesick clone 'atcheson/dotfiles'
-/bin/sh `pwd -P`/setup/bootstrap.sh
+/bin/sh $HOME/.homesick/repos/dotfiles/setup/bootstrap.sh
