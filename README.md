@@ -7,7 +7,7 @@ My Debian desktop configuration. Currently under development; no guarantees that
 
 [`/home`](home/)
 ------
-Configuration files for use with various applications on an xmonad-centered desktop Linux, and a homesick-compatible dotfile repo. See [`technicalpickles/homesick`](http://github.com/technicalpickles/homesick) for details on Homesick.
+Configuration files for use with various applications on an [xmonad](http://xmonad.org/)-centered desktop Linux, and a homesick-compatible dotfile repo. See [`technicalpickles/homesick`](http://github.com/technicalpickles/homesick) for details on Homesick.
 
 [`/setup`](/setup)
 ------
