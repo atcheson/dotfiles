@@ -6,6 +6,11 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
+#set up /etc/apt/sources.list
+curl https://raw.githubusercontent.com/atcheson/dotfiles/master/setup/system/sources.list > \
+    /etc/apt/sources.list
+apt-get update
+
 #install all packages
 echo "`basename $0`: installing packages"
 curl https://raw.githubusercontent.com/atcheson/dotfiles/master/setup/system/pkglist | \
