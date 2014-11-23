@@ -24,7 +24,7 @@ The idea is to be able to configure a Debian desktop system to my personal prefe
 3. `apt-get --assume-yes install curl && curl -L deb-system-install.atcheson.org | sh -s m` (replace '`m`' at the end with the name of the non-root user you created during install).
 4. Wait for the scripts to run, then log out and log in as your non-root user. `startx`.
 
-This works because `deb-system-install.atcheson.org`  redirects to  [`/system/bootstrap.sh`](/setup/system/bootstrap.sh), which first downloads [`/system/sources.list`](/setup/system/sources.list) and copies it over /etc/apt/sources.list, then APT updates and upgrades, then fetches [`/system/pkglist`](/setup/system/pkglist) and installs all packages, then configures `/etc/sudoers`, and finally, if a username was provided as the first command-line parameter, starts a shell running as that user and fetches `deb-user-install.atcheson.org`, which redirects to [`/user/init.sh`](/setup/user/pkglist) which will configure that user's account. 
+This works because `deb-system-install.atcheson.org`  redirects to  [`/system/bootstrap.sh`](/setup/system/bootstrap.sh), which first downloads [`/system/sources.list`](/setup/system/sources.list) and copies it over /etc/apt/sources.list, then APT updates and upgrades, then fetches [`/system/pkglist`](/setup/system/pkglist) and installs all packages, then configures `/etc/sudoers`, and finally, if a username was provided as the first command-line parameter, starts a shell running as that user and fetches `deb-user-install.atcheson.org`, which redirects to [`/user/init.sh`](/setup/user/init.sh) which will configure that user's account. 
 
 
 **Configuring a brand-new user account**
