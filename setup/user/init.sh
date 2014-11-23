@@ -1,8 +1,5 @@
 gem install homesick
 homesick clone atcheson/dotfiles
-#TODO: backup existing dotfiles
-homesick link dotfiles
-
+homesick symlink dotfiles
 vim +PluginInstall +PluginUpdate +qall
-:
-
+source ~/.zshrc
