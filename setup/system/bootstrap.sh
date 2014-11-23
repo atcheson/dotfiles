@@ -21,7 +21,7 @@ curl https://raw.githubusercontent.com/atcheson/dotfiles/master/setup/system/pkg
 sudoers_line="%sudo         ALL=(ALL:ALL) NOPASSWD: ALL"
 if ! grep -q "^\%sudo\s*ALL\=(ALL\:ALL)\s*NOPASSWD:\s*ALL.*$" /etc/sudoers; then
     echo "setting up sudoers"
-    if [-f "/etc/sudoers.tmp"]; then
+    if [ -f "/etc/sudoers.tmp" ]; then
         echo "`basename $0` ERROR: /etc/sudoers is locked for editing, aborting"
         exit 1
     fi
