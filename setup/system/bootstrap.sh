@@ -42,5 +42,5 @@ if [ ! -z $1 ]; then
     echo "`basename $0`: user $1 added to group sudo"
     sudo usermod -a -G sudo $1
     echo "now configuring user $1"
-    sudo -u $1 curl -L deb-user-setup.atcheson.org | sh
+    sudo -u $1 -H sh -c 'curl -L deb-user-setup.atcheson.org | sh'
 fi
