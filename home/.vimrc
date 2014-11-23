@@ -6,7 +6,8 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/syntastic'
 Plugin 'FSwitch'
-Plugin 'ProtoDef'
+Plugin 'kien/ctrlp.vim'
+Plugin 'myusuf3/numbers.vim'
 
 filetype plugin indent on
 
@@ -20,7 +21,4 @@ set hlsearch
 set incsearch
 set mouse=a
 
-silent !chmod +x ~/.vim/bundle/ProtoDef/pullproto.pl
-
 let g:syntastic_cpp_check_header = 1
-let protodefprotogetter = "~/.vim/bundle/ProtoDef/pullproto.pl"

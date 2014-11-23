@@ -6,3 +6,4 @@ urxvt.foreground: #ffffff
 urxvt.borderless: 1
 
 urxvt*dynamicColors: on
+
