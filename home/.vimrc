@@ -18,6 +18,7 @@ set smarttab
 set expandtab
 set hlsearch
 set incsearch
+set mouse=a
 
 silent !chmod +x ~/.vim/bundle/ProtoDef/pullproto.pl
 
