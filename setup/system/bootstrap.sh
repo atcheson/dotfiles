@@ -32,7 +32,7 @@ if ! grep -q "^\%sudo\s*ALL\=(ALL\:ALL)\s*NOPASSWD:\s*ALL.*$" /etc/sudoers; then
 fi
 
 #configure a user, if supplied
-if [ ! -z $i ]; then
+if [ ! -z $1 ]; then
     echo "`basename $0`: user $1 added to group sudo"
     useradd -G sudo $1
     echo "now configuring user $1"
