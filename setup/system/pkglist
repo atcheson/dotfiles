@@ -579,7 +579,7 @@ i util-linux                      - Miscellaneous system utilities
 i vim                             - Vi IMproved - enhanced vi editor          
 i vim-common                      - Vi IMproved - Common files                
 i vim-tiny                        - Vi IMproved - enhanced vi editor - compact
-i vimgtk
+i vimgtk                          - vim with clipboard support
 i vino                            - VNC server for GNOME                      
 i w3m                             - WWW browsable pager with excellent tables/
 i wamerican                       - American English dictionary words for /usr
