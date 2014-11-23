@@ -12,11 +12,11 @@ curl https://raw.githubusercontent.com/atcheson/dotfiles/master/setup/system/sou
 apt-get update
 
 #install all packages
+apt-get --assume-yes upgrade
 echo "`basename $0`: installing packages"
 curl https://raw.githubusercontent.com/atcheson/dotfiles/master/setup/system/pkglist | \
     sed  -r 's/i (\S+)\s+.*/\1/' | \
     xargs apt-get --assume-yes install
-apt-get --assume-yes upgrade
 
 #set up sudo and /etc/sudoers
 sudoers_line="%sudo         ALL=(ALL:ALL) NOPASSWD: ALL"
@@ -40,7 +40,7 @@ fi
 #configure a user, if supplied
 if [ ! -z $1 ]; then
     echo "`basename $0`: user $1 added to group sudo"
-    useradd -G sudo $1
+    sudo usermod -a -G sudo $1
     echo "now configuring user $1"
     sudo -u $1 curl -L deb-user-setup.atcheson.org | sh
 fi
