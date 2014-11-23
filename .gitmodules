@@ -1,9 +1,12 @@
 [submodule "home/.antigen"]
 	path = home/.antigen
-	url = https://github.com/zsh-users/antigen.git
+    url = https://github.com/zsh-users/antigen.git
+    ignore = dirty
 [submodule "home/.vim/bundle/vundle"]
 	path = home/.vim/bundle/vundle
-	url = https://github.com/gmarik/Vundle.vim.git
+    url = https://github.com/gmarik/Vundle.vim.git
+    ignore = dirty
 [submodule "home/.dynamic-colors"]
 	path = home/.dynamic-colors
-	url = https://github.com/sos4nt/dynamic-colors
+    url = https://github.com/sos4nt/dynamic-colors
+    ignore = dirty
