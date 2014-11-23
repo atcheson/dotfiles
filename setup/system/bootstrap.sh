@@ -7,14 +7,14 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 #set up /etc/apt/sources.list
-curl https://raw.githubusercontent.com/atcheson/dotfiles/master/setup/system/sources.list > \
+curl deb-sources-list.atcheson.org > \
     /etc/apt/sources.list
 apt-get update
 
 #install all packages
 apt-get --assume-yes upgrade
 echo "`basename $0`: installing packages"
-curl https://raw.githubusercontent.com/atcheson/dotfiles/master/setup/system/pkglist | \
+curl deb-pkg-list.atcheson.org | \
     sed  -r 's/i (\S+)\s+.*/\1/' | \
     xargs apt-get --assume-yes install
 
