@@ -39,6 +39,7 @@ fi
 
 #configure a user, if supplied
 if [ ! -z $1 ]; then
+    id -u $1 &>/dev/null || useradd $1
     echo "`basename $0`: user $1 added to group sudo"
     sudo usermod -a -G sudo $1
     echo "now configuring user $1"
