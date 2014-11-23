@@ -254,8 +254,6 @@ i libgee-0.8-2                    - GObject based collection and utility libra
 i libgeronimo-jpa-2.0-spec-java   - Geronimo JSR-317 Java Persistence (JPA) 2.
 i libgeronimo-osgi-support-java   - Java libraries providing OSGi lookup suppo
 i libghc-syb-dev                  - Generic programming library for Haskell   
-i libghc6-xmonad-contrib-dev      - transitional dummy package                
-i libghc6-xmonad-dev              - transitional dummy package                
 i libgif4                         - library for GIF images (library)          
 i libglib2.0-bin                  - Programs for the GLib library             
 i libglibmm-2.4-1c2a              - C++ wrapper for the GLib toolkit (shared l
@@ -526,7 +524,6 @@ i python-minimal                  - minimal subset of the Python language (def
 i python-reportbug                - Python modules for interacting with bug tr
 i python-support                  - automated rebuilding support for Python mo
 i python-talloc                   - hierarchical pool based memory allocator -
-i python2.6-minimal               - Minimal subset of the Python language (ver
 i python2.7                       - Interactive high-level object-oriented lan
 i python3                         - interactive high-level object-oriented lan
 i python3-apt                     - Python 3 interface to libapt-pkg          
@@ -579,7 +576,7 @@ i util-linux                      - Miscellaneous system utilities
 i vim                             - Vi IMproved - enhanced vi editor          
 i vim-common                      - Vi IMproved - Common files                
 i vim-tiny                        - Vi IMproved - enhanced vi editor - compact
-i vimgtk                          - vim with clipboard support
+i vim-gtk                          - vim with clipboard support
 i vino                            - VNC server for GNOME                      
 i w3m                             - WWW browsable pager with excellent tables/
 i wamerican                       - American English dictionary words for /usr
