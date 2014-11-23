@@ -1,5 +1,5 @@
 #do this first to prevent flickering
-export PATH=$PATH:/$HOME/.local/bin:~/.cabal/bin:~/scripts:$HOME/.dynamic-colors/bin:$HOME/git/depot_tools
+export PATH=$PATH:$HOME/.homesick/repos/dotfiles/scripts:$HOME/.local/bin:~/.cabal/bin:~/scripts:$HOME/.dynamic-colors/bin:$HOME/git/depot_tools
 
 for infile in $HOME/.colorschemes/*
 do
