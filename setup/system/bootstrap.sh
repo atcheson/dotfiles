@@ -1,5 +1,15 @@
 #!/bin/sh
 
+# linux.atcheson.org
+#
+# INSTALL:
+# 1. Install a minimal Debian system using a netinst image.
+# 2. Boot and login as root. Ensure you have internet access.
+# 3. apt-get --assume-yes install curl && curl -L deb-system-install.atcheson.org | sh -s m 
+#    (replace 'm' at the end with the name of the non-root user you created during install).
+# 4. Wait for the scripts to run, then log out and log in as your non-root user. 
+# 5. startx
+
 if [ "$(id -u)" != "0" ]; then
    echo "This system setup script must be run as root"
    echo "For user setup, try: curl -L deb-user-install.atcheson.org | sh"
