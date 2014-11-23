@@ -2,7 +2,7 @@
 
 if [ "$(id -u)" != "0" ]; then
    echo "This system setup script must be run as root"
-   echo "For user setup, try: curl -L deb-user-setup.atcheson.org | sh"
+   echo "For user setup, try: curl -L deb-user-install.atcheson.org | sh"
    exit 1
 fi
 
@@ -43,5 +43,5 @@ if [ ! -z $1 ]; then
     echo "`basename $0`: user $1 added to group sudo"
     sudo usermod -a -G sudo $1
     echo "now configuring user $1"
-    sudo -u $1 -H sh -c 'curl -L deb-user-setup.atcheson.org | sh'
+    sudo -u $1 -H sh -c 'curl -L deb-user-install.atcheson.org | sh'
 fi
