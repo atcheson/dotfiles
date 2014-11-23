@@ -16,7 +16,7 @@ echo "`basename $0`: installing packages"
 curl https://raw.githubusercontent.com/atcheson/dotfiles/master/setup/system/pkglist | \
     sed  -r 's/i (\S+)\s+.*/\1/' | \
     xargs apt-get --assume-yes install
-apt-get upgrade
+apt-get --assume-yes upgrade
 
 #set up sudo and /etc/sudoers
 sudoers_line="%sudo         ALL=(ALL:ALL) NOPASSWD: ALL"
