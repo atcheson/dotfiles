@@ -38,3 +38,9 @@ autoload -U colors && colors
 source $HOME/.dynamic-colors/completions/dynamic-colors.zsh
 
 PROMPT="%{$fg[blue]%}[%{$reset_color%}%1d%{$fg[blue]%}]%{$fg[blue]%}>%{$reset_color%} "
+
+if [ -f $HOME/git/atch/atch.py ]; then
+    alias atch="python $HOME/git/atch/atch.py"
+else
+    alias atch="python $HOME/.homesick/scripts/atch/atch.py"
+fi
