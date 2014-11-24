@@ -5,6 +5,9 @@ My Debian desktop configuration. Currently under development; no guarantees that
 * A set of scripts to automatically configure a new Debian installation or Linux home directory, [`/setup`](/setup)
 * Some miscellaneous scripts, mostly for managing configuration files, [`/scripts`](/scripts)
 
+It looks like this:
+![screenshot](/screenshot.png?raw=true "Screenshot")
+
 [`/home`](home/)
 ------
 Configuration files for use with various applications on an [xmonad](http://xmonad.org/)-centered desktop Linux, and a homesick-compatible dotfile repo. See [`technicalpickles/homesick`](http://github.com/technicalpickles/homesick) for details on Homesick.
