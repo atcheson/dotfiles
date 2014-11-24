@@ -24,6 +24,6 @@ set incsearch
 set mouse=a
 
 let g:syntastic_cpp_check_header = 1
-let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_at_startup = 1
 
-inoremap <expr><Tab>  neocomplete#start_manual_complete()
+"inoremap <expr><Tab>  neocomplete#start_manual_complete()
