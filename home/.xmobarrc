@@ -13,5 +13,5 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run StdinReader ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %coretemp% | %multicpu% | %memory% | %ZYHB% | <fc=#010fee>%date%</fc>"
+       , template = "%StdinReader% }{ %coretemp% | %multicpu% | %memory% | %ZYHB%| <fc=#010fee>%date%</fc>"
        }
