@@ -10,3 +10,7 @@
     path = home/.dynamic-colors
     url = https://github.com/sos4nt/dynamic-colors
     ignore = dirty
+[submodule "scripts/atch"]
+	path = scripts/atch
+    url = https://github.com/atcheson/atch
+    ignore = dirty
