@@ -5,7 +5,7 @@
 # INSTALL:
 # 1. Install a minimal Debian system using a netinst image.
 # 2. Boot and login as root. Ensure you have internet access.
-# 3. apt-get --assume-yes install curl && curl -L deb-system-install.atcheson.org | sh -s m 
+# 3. apt-get --assume-yes install curl && curl -L linux.atcheson.org -s m 
 #    (replace 'm' at the end with the name of the non-root user you created during install).
 # 4. Wait for the scripts to run, then log out and log in as your non-root user. 
 # 5. startx
@@ -17,14 +17,14 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 #set up /etc/apt/sources.list
-curl deb-sources-list.atcheson.org > \
+curl -L deb-sources-list.atcheson.org > \
     /etc/apt/sources.list
 apt-get update
 
 #install all packages
 apt-get --assume-yes upgrade
 echo "`basename $0`: installing packages"
-curl deb-pkg-list.atcheson.org | \
+curl -L deb-pkg-list.atcheson.org | \
     sed  -r 's/i (\S+)\s+.*/\1/' | \
     xargs apt-get --assume-yes install
 
