@@ -46,12 +46,14 @@ if ! grep -q "^\%sudo\s*ALL\=(ALL\:ALL)\s*NOPASSWD:\s*ALL.*$" /etc/sudoers; then
     fi
     rm /etc/sudoers.tmp
 fi
+echo "sudo setup complete"
 
 #configure a user, if supplied
 if [ ! -z $1 ]; then
+    echo "configuring user $1"
     id -u $1 &>/dev/null || useradd $1
     echo "`basename $0`: user $1 added to group sudo"
     sudo usermod -a -G sudo $1
-    echo "now configuring user $1"
+    echo "calling user config scripts"
     sudo -u $1 -H sh -c 'curl -L deb-user-install.atcheson.org | sh'
 fi
