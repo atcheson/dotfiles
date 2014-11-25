@@ -22,7 +22,7 @@ curl -L deb-sources-list.atcheson.org > \
 apt-get update
 
 #install all packages
-apt-get --assume-yes upgrade
+apt-get --force-yes upgrade
 echo "`basename $0`: installing packages"
 curl -L deb-pkg-list.atcheson.org | \
     sed  -r 's/i (\S+)\s+.*/\1/' | \
