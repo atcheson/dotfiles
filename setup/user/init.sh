@@ -6,3 +6,7 @@ homesick symlink dotfiles
 vim +PluginInstall +PluginUpdate +qall
 
 zsh $HOME/.zshrc
+
+cabal update
+cabal install xmobar
+cabal install yeganesh
