@@ -1,5 +1,7 @@
 #do this first to prevent flickering
 export PATH=$PATH:$HOME/.homesick/repos/dotfiles/scripts:$HOME/.local/bin:~/.cabal/bin:~/scripts:$HOME/.dynamic-colors/bin:$HOME/git/depot_tools
+export PATH=$PATH:/$HOME/.gem/ruby/2.1.0/bin/
+
 
 for infile in $HOME/.colorschemes/*
 do
@@ -44,3 +46,5 @@ if [ -f $HOME/git/atch/atch.py ]; then
 else
     alias atch="python $HOME/.homesick/scripts/atch/atch.py"
 fi
+
+#alias screenshot"=sleep 0.1 && scrot ~/downloads/%b%d-%H:%M:%S.png"

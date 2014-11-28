@@ -5,7 +5,7 @@
 # INSTALL:
 # 1. Install a minimal Debian system using a netinst image.
 # 2. Boot and login as root. Ensure you have internet access.
-# 3. apt-get --assume-yes install curl && curl -L linux.atcheson.org -s m 
+# 3. apt-get --assume-yes install curl && curl -L linux.atcheson.org | sh -s m
 #    (replace 'm' at the end with the name of the non-root user you created during install).
 # 4. Wait for the scripts to run, then log out and log in as your non-root user. 
 # 5. startx
@@ -22,8 +22,9 @@ curl -L deb-sources-list.atcheson.org > \
 apt-get update
 
 #install all packages
+export DEBIAN_FRONTEND=noninteractive
 apt-get --force-yes upgrade
-echo "`basename $0`: installing packages"
+echo "`basename $0`: installing packages",
 curl -L deb-pkg-list.atcheson.org | \
     sed  -r 's/i (\S+)\s+.*/\1/' | \
     xargs apt-get --assume-yes install
@@ -49,7 +50,7 @@ fi
 echo "sudo setup complete"
 
 #configure a user, if supplied
-if [ ! -z $1 ]; then
+if [ ! -z "$1" ]; then
     echo "configuring user $1"
     id -u $1 &>/dev/null || useradd $1
     echo "`basename $0`: user $1 added to group sudo"
