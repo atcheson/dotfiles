@@ -292,7 +292,7 @@ i libheimntlm0-heimdal            - Heimdal Kerberos - NTLM support library
 i libhogweed2                     - low level cryptographic library (public-ke
 i libhx509-5-heimdal              - Heimdal Kerberos - X509 support library   
 i libibus-1.0-5                   - Intelligent Input Bus - shared library    
-i libical1                        - iCalendar library implementation in C (run
+i libical1a                       - iCalendar library implementation in C (run
 i libicu4j-4.4-java               - Library for Unicode support and internatio
 i libicu4j-java                   - Library for Unicode support and internatio
 i libicu52                        - International Components for Unicode      
