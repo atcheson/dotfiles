@@ -25,14 +25,15 @@ main = do
 		startupHook = myStartupHook,
 		manageHook = myManageHook,
 		layoutHook = myLayout,
-		logHook = myLogHook xmproc
+		logHook = myLogHook xmproc,
+        handleEventHook = docksEventHook <+> handleEventHook defaultConfig
 	}`additionalKeysP` myAdditionalKeys
 
 myAdditionalKeys = 
 	[
 		("M-z", sendMessage MirrorShrink),
 		("M-a", sendMessage MirrorExpand),
-		("M-p", spawn "`yeganesh -x`"),
+		("M-p", spawn "`~/.cabal/bin/yeganesh -x`"),
 		("M-q", spawn "pkill trayer; xmonad --recompile; xmonad --restart"),
 		("M-o", spawn "thunar"),
 		("M-i", spawn "chromium")
@@ -53,11 +54,11 @@ myLogHook outpipe = dynamicLogWithPP $ xmobarPP
 	}
 
 myManageHook = composeAll
-	[fmap not isDialog --> doF avoidMaster,
+	[return True -?> doF avoidMaster,
 	 className =? "trayer" --> doIgnore]
 
 myStartupHook = do
-	spawn "trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 4 --height 15 --transparent true --tint 0x000000"
+	spawn "trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 4 --height 15 --transparent true 0x000000"
 
 avoidMaster :: W.StackSet i l a s sd -> W.StackSet i l a s sd
 avoidMaster = W.modify' $ \c -> case c of
